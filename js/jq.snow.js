@@ -1,4 +1,4 @@
-/**
+﻿/**
  * js网页雪花效果jquery插件 
  * 懒人建站 www.51xuediannao.com   整理
  * @see http://workshop.rs
@@ -19,11 +19,11 @@
 				options			= $.extend({}, defaults, options);
 			
 			var interval		= setInterval( function(){
-				var startPositionLeft 	= Math.random() * documentWidth - 100,
+				var startPositionLeft 	= Math.random() * documentWidth - 200,
 				 	startOpacity		= 0.5 + Math.random(),
 					sizeFlake			= options.minSize + Math.random() * options.maxSize,
-					endPositionTop		= documentHeight - 40,
-					endPositionLeft		= startPositionLeft - 100 + Math.random() * 500,
+					endPositionTop		= documentHeight-100
+					endPositionLeft		=  startPositionLeft+ Math.random() *200
 					durationFall		= documentHeight * 10 + Math.random() * 5000;
 				$flake.clone().appendTo('body').css({
 							left: startPositionLeft,
