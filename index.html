@@ -1,0 +1,104 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>浪漫小屋</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+	
+	<script type="text/javascript" src="js/jq.snow.js"></script>
+</head> 
+
+<body>
+<audio autoplay="autopaly">
+  <source src="爱的钢琴曲.mp3" type="audio/mp3" />
+  <source src="爱的钢琴曲.ogg" type="audio/ogg" />
+Your browser does not support this audio format.
+</audio>
+<!--下面是调用方法和参数说明-->
+	<script>
+	$(function(){
+		$.fn.snow({ 
+			minSize: 5,		//雪花的最小尺寸
+			maxSize: 50, 	//雪花的最大尺寸
+			newOn: 150		//雪花出现的频率 这个数值越小雪花越多
+		});
+	});
+	</script>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+	<span class="comments">傻媳妇儿：</span><br />
+        <span class="space"/><span class="space"/><span class="space"/><span class="space"/><span class="comments">今天，</span><br />
+        <span class="space"/><span class="space"/><span class="space"/><span class="space"/><span class="comments">二零一九年正月二十九， </span><br />
+        <span class="space"/><span class="space"/><span class="space"/><span class="space"/><span class="comments">是我陪你度过的第一个生日，</span><br />
+        <span class="space"/><span class="space"/><span class="space"/><span class="space"/><span class="comments">前半生，没能陪你一起走过，</span><br />
+        <span class="space"/><span class="space"/><span class="space"/><span class="space"/><span class="comments">余生，我会陪你度过每一天，</span><br />
+        <span class="space"/><span class="space"/><span class="space"/><span class="space"/><span class="keyword">白首不分离......</span> <br />
+        <br />
+	<span class="space"/><span class="space"/><span class="space"/><span class="space"/><span class="comments">总在忐忑，总在不知所措，</span><br />
+	<span class="space"/><span class="space"/><span class="space"/><span class="space"/><span class="comments">不知怎样去走进你的内心，</span><br />
+        <span class="space"/><span class="space"/><span class="space"/><span class="space"/><span class="comments">我希望成为你真正的依靠，</span><br />
+        <span class="space"/><span class="space"/><span class="space"/><span class="space"/><span class="comments">为你遮风挡雨，</span><br />
+        <span class="space"/><span class="space"/><span class="space"/><span class="space"/><span class="comments">伴你日升日落，</span><br />
+	<span class="space"/><span class="space"/><span class="space"/><span class="space"/><span class="comments">去永远守护你......</span><br />
+        <br />
+        <span class="space"/><span class="space"/><span class="space"/><span class="space"/><span class="comments">陪伴是最长情的告白，</span><br />
+	<span class="space"/><span class="space"/><span class="space"/><span class="space"/><span class="comments">时间会证明一切，</span><br />
+        <span class="space"/><span class="space"/><span class="space"/><span class="space"/><span class="keyword">我爱你，丽丽，</span><br />
+        <span class="space"/><span class="space"/><span class="space"/><span class="space"/><span class="keyword">生日快乐！</span><br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						       媳妇儿，
+					</div>
+					<div id="loveu">
+						生日快乐！</div>
+					</div>
+				</div>
+
+
+				     </div>
+				</div>
+			</div>
+</div>
+</div>
+
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 1000);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+	<embed src="http://sisiyan.sinaapp.com/Love.mp3" autostart="true" loop="true" hidden="true"></embed>
+</body>
+</html>
+<SCRIPT Language=VBScript><!--
+
+//--></SCRIPT>
