@@ -14,26 +14,14 @@
 	<script type="text/javascript" src="js/garden.js"></script>
         <script type="text/javascript" src="js/functions.js"></script>
 	<script type="text/javascript" src="js/jq.snow.js"></script>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 </head> 
 
 <body>
-<audio id="audio"   autoplay="autopaly" loop="loop" />
+<audio id="audio"  autoplay="autopaly"  loop="loop" />
   <source src="爱的钢琴曲.mp3" type="audio/mp3" />
 </audio>
 <script>
-function toggleSound() {
-    var oA = document.getElementById(“audio”);//获取ID
-        if (oA.paused) { //如果暂停
-            oA.paused=false;//设为不暂停
-            oA.volume=0.1;//设置自动播放的初始音量
-            oA.play();//调用play（）方法播放
-        }
-
-  setInterval("toggleSound()",1);//用定时器触发autoplay自动播放
-}
-    </script>
-<script>
-
 window.onload=function () {
     let oA=document.querySelector("#audio");
     let timer=null;
@@ -42,13 +30,16 @@ window.onload=function () {
             oA.paused=false;//设为不暂停
             oA.volume=0.1;//设置自动播放的初始音量
             oA.play();//调用play（）方法播放
+            document.removeEventListener("touchstart",autoPlay, false);
         }else {//如果未暂停
             clearInterval(timer);//清掉定时器
         }
     }
     timer=setInterval(autoPlay,1);//用定时器触发autoplay自动播放
 }
+
     </script>
+
 <!--下面是调用方法和参数说明-->
 	<script>
 	$(function(){
